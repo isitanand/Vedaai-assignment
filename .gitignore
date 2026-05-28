@@ -1,0 +1,21 @@
+node_modules/
+.turbo/
+dist/
+.next/
+out/
+build/
+
+# env / secrets
+.env
+.env.local
+.env.*.local
+apps/*/.env
+apps/*/.env.local
+
+# logs
+*.log
+npm-debug.log*
+
+# os
+.DS_Store
+Thumbs.db
