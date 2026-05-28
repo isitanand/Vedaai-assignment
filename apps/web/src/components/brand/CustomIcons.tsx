@@ -1,6 +1,5 @@
 import type { SVGProps } from "react";
 
-
 export function HomeIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -21,7 +20,6 @@ export function HomeIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-
 export function MyGroupsIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -34,17 +32,17 @@ export function MyGroupsIcon(props: SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      {}
-      <circle cx="9.5" cy="6" r="2.8" />
-      {}
-      <path d="M5 21v-2.5a4 4 0 0 1 4-4h1a4 4 0 0 1 4 4V21" />
-      {}
-      <path d="M14 14.5 L18.5 8.5" />
-      <circle cx="19" cy="7.5" r="1" fill="currentColor" stroke="none" />
+      <mask id="my-groups-mask">
+        <rect x="0" y="0" width="24" height="24" fill="white" />
+        <rect x="6" y="8" width="5" height="2" rx="0.5" fill="black" />
+        <rect x="6" y="12" width="4" height="2" rx="0.5" fill="black" />
+        <circle cx="15.5" cy="9.5" r="2.2" fill="black" />
+        <path d="M12 16.5c0-1.8 1.5-3 3.5-3s3.5 1.2 3.5 3v0.5h-7v-0.5z" fill="black" />
+      </mask>
+      <rect x="3" y="4" width="18" height="16" rx="3" fill="currentColor" stroke="none" mask="url(#my-groups-mask)" />
     </svg>
   );
 }
-
 
 export function AssignmentsIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -58,16 +56,15 @@ export function AssignmentsIcon(props: SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      {}
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-      <polyline points="14 2 14 8 20 8" />
-      {}
-      <line x1="8" y1="13" x2="16" y2="13" />
-      <line x1="8" y1="17" x2="12" y2="17" />
+      <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+      <polyline points="14 2 14 7.5 19.5 7.5" />
+      <rect x="7" y="11" width="2" height="2" rx="0.5" fill="currentColor" stroke="none" />
+      <line x1="11" y1="12" x2="16" y2="12" />
+      <rect x="7" y="15" width="2" height="2" rx="0.5" fill="currentColor" stroke="none" />
+      <line x1="11" y1="16" x2="14" y2="16" />
     </svg>
   );
 }
-
 
 export function ToolkitIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -81,15 +78,11 @@ export function ToolkitIcon(props: SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      {}
-      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-      {}
-      <path d="M12 8 L12.5 9.5 L14 10 L12.5 10.5 L12 12 L11.5 10.5 L10 10 L11.5 9.5 Z" strokeWidth={1.2} />
+      <rect x="5" y="3" width="14" height="18" rx="2.5" />
+      <line x1="5" y1="17" x2="19" y2="17" />
     </svg>
   );
 }
-
 
 export function LibraryIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -103,11 +96,8 @@ export function LibraryIcon(props: SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      {}
-      <circle cx="12" cy="12" r="9" />
-      {}
-      <line x1="12" y1="12" x2="12" y2="3" />
-      <line x1="12" y1="12" x2="20.2" y2="15.2" />
+      <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+      <path d="M22 12A10 10 0 0 0 12 2v10z" />
     </svg>
   );
 }
